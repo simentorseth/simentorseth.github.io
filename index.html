@@ -9,7 +9,7 @@
         function calc() {
             var num_people = document.getElementById("num_people").value;
             var hunger = document.getElementById("hunger").value;
-            const num_pizzas_per_person = 2.5 / 5;
+            const num_pizzas_per_person = 2.5 / 2;
             var num_pizzas = Math.ceil(num_people * hunger * num_pizzas_per_person);
             document.getElementById("num_pizzas").innerHTML = num_pizzas;
             document.getElementsByClassName("pizza_text")[0].style.display = "block";
