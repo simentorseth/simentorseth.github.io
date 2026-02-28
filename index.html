@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzakalkulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function calc() {
+            var num_people = document.getElementById("num_people").value;
+            var hunger = document.getElementById("hunger").value;
+            const num_pizzas_per_person = 2.5 / 5;
+            var num_pizzas = Math.ceil(num_people * hunger * num_pizzas_per_person);
+            document.getElementById("num_pizzas").innerHTML = num_pizzas;
+            document.getElementsByClassName("pizza_text")[0].style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <img src="icons/sweco_black.png" alt="sweco-logo" width="120px">
+    </div>
+    <h1>Pizzakalkulator</h1>
+    <form method="post">
+        <div class="wrapper">
+            <input type="number" placeholder="Antall personer" min="0" max="50" name="num_people" id="num_people" onchange="calc()">
+            <select id="hunger" name="hunger" onchange="calc()">
+                <option value="0.8">Småsulten</option>
+                <option value="1.0">Sulten</option>
+                <option value="1.2">Kjempesulten</option>
+            </select>
+            <p id="num_pizzas" class="num_pizzas"></p>
+            <p class="pizza_text">pizzaer</p>
+        </div>
+    </form>
+    <section>
+        <a href="https://www.pizzabakeren.no/menu.php">Pizzabakeren</a>
+        <a href="https://www.peppes.no/desktop/meny/pizza-meny">Peppes Pizza</a>
+        <a href="https://www.dominos.no/">Domino's</a>
+        <a href="https://wolt.com/nb/nor">Wolt</a>
+        <a href="https://www.foodora.no/">Foodora</a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@font-face {
+    font-family: sweco-sans;
+    src: url(fonts/SWECOSANS-REGULAR.OTF);
+}
+
+@font-face {
+    font-family: sweco-sans;
+    src: url(fonts/SWECOSANS-BOLD.OTF);
+}
+
+body {
+  min-height: calc(100vh - 50px);
+}
+p, a, h1, h2, h3, body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+body {
+    background: #87BE73;
+    background-size: 100%;
+    padding: 25px;
+}
+h1 {
+    text-align: center;
+    margin: 50px 0 20px 0;
+    font-size: 2.6em;
+}
+#num_people {
+    display: inline-block;
+    width: 291px;
+    padding: 5px 0 5px 15px;
+    font-size: 2em;
+}
+select {
+    display: block;
+    width: 310px;
+    padding: 5px 0 5px 15px;
+    font-size: 2em;
+    margin-top: 8px;
+}
+#submit {
+    display: block;
+    width: 310px;
+    padding: 5px;
+    font-size: 2em;
+    margin-top: 8px;
+}
+.num_pizzas {
+    font-size: 5em;
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+.pizza {
+    width: 80px;
+    padding: 5px;
+}
+.pizza_text {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 1em 0;
+    display: none;
+}
+.wrapper {
+    width: 300px;
+    margin: 0 auto;
+}
+section {
+	text-align: center;
+}
+section a {
+	margin: 0 0.5em;
+}
+@media only screen and (max-device-width : 480px){
+    select, #submit {
+        width: 100%;
+    }
+    #personer {
+        width: 93.5%;
+    }
+	.lowerPizza {
+		margin: 0 0 1em 0;
+	}
+	section a {
+		padding: 1em 0;
+		margin: 0 0;
+		display: block;
+	}
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+.logo img {
+    height: 50%;
+}
