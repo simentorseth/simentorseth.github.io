@@ -14,6 +14,12 @@
             document.getElementById("num_pizzas").innerHTML = num_pizzas;
             document.getElementsByClassName("pizza_text")[0].style.display = "block";
         }
+
+        const element = document.querySelector("form");
+        element.addEventListener("submit", event => {
+            event.preventDefault();
+            console.log("Form submission cancelled.");
+        });
     </script>
 </head>
 <body>
@@ -41,4 +47,5 @@
         <a href="https://www.foodora.no/">Foodora</a>
     </section>
 </body>
+
 </html>
